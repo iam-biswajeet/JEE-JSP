@@ -35,4 +35,15 @@
 </attribute> 
 
 </tag>  
-</taglib>  
+<function>
+		
+		<name>show</name>
+		<function-class>com.nt.el.WishMessageGenerator</function-class>
+		<function-signature>
+			java.lang.String wish(java.lang.String)
+		</function-signature>
+	</function>
+</taglib>
+
+
+	
