@@ -1,11 +1,12 @@
 
-
-
-<%@page import="java.util.*,com.nt.beans.*" contentType="text/html"%>
+<%@page import="java.util.*,com.nt.beans.*" %>
 <h2 style="color: red; text-align: center">Employee Details</h2>
+
 <%
 String desg=request.getParameter("desg");
 List<Employee> list=(List<Employee>)request.getAttribute("empDetails");
+response.setContentType("application/ms-word");
+response.setHeader("Content-Disposition","attachment;fileName=empDetail");
 %>
 <%System.out.println("html"+list.size());%>
 <%
@@ -52,10 +53,3 @@ else{
 <%
 }
 %>
-<center><a href="JavaScript:printPage()">print</a></center>
-<script language="JavaScript">
-function printPage(){
-	frames.focus();
-	frames.print();
-}
-</script>
